@@ -18,7 +18,7 @@ hight = 150
 
 while keyboard.is_pressed('q') == False:
     pyautogui.FAILSAFE = True
-    sleep(2.6)
+    sleep(2.4)
     all_colors = []
     for ww in range(width):
         try:
@@ -60,7 +60,7 @@ while keyboard.is_pressed('q') == False:
 
     pyautogui.moveTo(950, 415)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
-    sleep(space_in_between * 0.0032 + second_cliff_width * 0.001)
+    sleep(space_in_between * 0.0032 + second_cliff_width * 0.0009)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
 
     # pyautogui.mouseDown(x=950, y=415, button='left')
