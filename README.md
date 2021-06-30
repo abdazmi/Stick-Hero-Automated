@@ -3,7 +3,7 @@ in order to play this game you need to
 1.open the game on this link below:
 https://www.silvergames.com/en/stick-hero
 
-2.then press play button
+2.then press play button (note: it is important to put you browser on full screen before running the code)
 
 3.then press start
 4.after that you can run the code and flip your screen immideatly back to the game and enjoy watching>
