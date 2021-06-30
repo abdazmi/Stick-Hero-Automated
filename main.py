@@ -18,7 +18,7 @@ hight = 150
 
 while keyboard.is_pressed('q') == False:
     pyautogui.FAILSAFE = True
-    sleep(2.4)
+    sleep(2)
     all_colors = []
     for ww in range(width):
         try:
