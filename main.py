@@ -1,9 +1,12 @@
 from pprint import pprint
 from time import sleep
 import keyboard
-import pyautogui
 import win32api
 import win32con
+import pyautogui
+
+
+# https://www.silvergames.com/en/stick-hero
 
 # RGB for hill: ( 41,  29,  20)
 # 1 start of screen X:  752 Y:  776
@@ -11,11 +14,13 @@ import win32con
 # 3 height of screen X:  752 Y:  926
 # 4 width of screen X: 1165 Y:  926
 
+# starting point of the game screen
 x = 752
 y = 776
+# width = 1165 - 752
 width = 413
-hight = 150
-
+# height = 926 - 776
+height = 150
 while keyboard.is_pressed('q') == False:
     pyautogui.FAILSAFE = True
     sleep(2)
@@ -26,6 +31,7 @@ while keyboard.is_pressed('q') == False:
             all_colors.append([r, g, b])
         except:
             continue
+    # pprint(all_colors)
 
     to_split = {}
     for i, j in enumerate(all_colors):
@@ -35,12 +41,11 @@ while keyboard.is_pressed('q') == False:
     pprint(to_split)
 
     starting_index = int(list(to_split.keys())[0])
-
     first_cliff = None
     next_cliff = None
     for key in to_split:
         if int(key) == starting_index:
-            starting_index  += 1
+            starting_index += 1
             first_cliff = (key, to_split[key])
         else:
             next_cliff = (key, to_split[key])
@@ -50,7 +55,7 @@ while keyboard.is_pressed('q') == False:
 
     first_cliff_width = first_cliff[0]
     space_in_between = int(next_cliff[0]) - int(first_cliff[0])
-    second_cliff_width = int(list(to_split.keys())[-1]) - next_cliff[0]
+    second_cliff_width = int(list(to_split.keys())[-1]) - int(next_cliff[0])
     stick_length = space_in_between + (second_cliff_width / 2)
 
     print(first_cliff_width)
