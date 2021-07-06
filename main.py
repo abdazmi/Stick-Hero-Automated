@@ -50,7 +50,7 @@ while keyboard.is_pressed('q') == False:
     print(first_cliff)
     print(next_cliff)
 
-    first_cliff_width = first_cliff[0]
+    first_cliff_width = first_cliff[0] - int(list(to_split.keys())[0])
     space_in_between = int(next_cliff[0]) - int(first_cliff[0])
     second_cliff_width = int(list(to_split.keys())[-1]) - int(next_cliff[0])
     stick_length = space_in_between + (second_cliff_width / 2)
