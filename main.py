@@ -11,16 +11,13 @@ import pyautogui
 # RGB for hill: ( 41,  29,  20)
 # 1 start of screen X:  752 Y:  776
 # 2 end of screen  X: 1165 Y:  776
-# 3 height of screen X:  752 Y:  926
-# 4 width of screen X: 1165 Y:  926
 
 # starting point of the game screen
 x = 752
 y = 776
 # width = 1165 - 752
 width = 413
-# height = 926 - 776
-height = 150
+
 while keyboard.is_pressed('q') == False:
     pyautogui.FAILSAFE = True
     sleep(2)
